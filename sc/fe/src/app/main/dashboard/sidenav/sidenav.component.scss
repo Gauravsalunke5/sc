@@ -1,0 +1,29 @@
+.mat-list-item{
+    font-size: 24px;
+}
+
+.mat-card-image{
+    // border: 2px solid black;
+align-content: center;
+// margin-left: 10px;
+}
+
+h3{
+    text-align: center;
+}
+
+a, h3, .mat-list-item{
+    color: white;
+}
+
+
+.mat-list-item:hover{
+    color: black;
+}
+ a:active{
+    background-color: green;
+}
+.mat-nav-list{
+    background-color:rgb(9, 9, 202);
+    height: 100%;
+}

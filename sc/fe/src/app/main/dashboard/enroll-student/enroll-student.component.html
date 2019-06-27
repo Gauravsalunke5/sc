@@ -1,0 +1,178 @@
+<!----main section starts(student registration)
+
+<div class="bg-warning d-flex h-50 align-items-center justify-content-center">
+  <div class="card">
+
+
+
+    <div class="form-group">
+      <label>ENROLLMENT FORM</label>
+
+      <div class="contents">
+        PR-Number: <input class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno"><br><br><br>
+
+        First-name: <input class="form-control" type="text" placeholder="First-name" formControlName="firstName">
+        Second-Name: <input class="form-control" type="text" placeholder="Middle name" formControlName="secondName">
+        Surname: <input class="form-control" type="text" placeholder="Surname" formControlName="surname"><br><br><br>
+
+        College-Name: <input class="form-control" type="text" placeholder="Ex:PCCE" formControlName="collegeName">
+        Branch: <input class="form-control" type="text" placeholder="Ex:Information Technology" formControlName="branch">
+        Year of admission: <input class="form-control" type="text" placeholder="Ex:MAY/JUNE 2019" formControlName="YOP"><br><br><br>
+
+        Email-Id: <input class="form-control" type="text" placeholder="abc@gmail.com" formControlName="emailId"><br><br><br>
+
+        Mobile-Number: <input class="form-control" type="number" placeholder="987654321" formControlName="mobileNumber"><br><br>
+
+        <button (click)="enrollStudent()">Submit Records</button>
+        <button (click)="cleardata()">clear data</button>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  -->
+
+<div class="container">
+  <div class="header">
+    <h3><br><strong>Student Enrollment Form</strong></h3>
+  </div>
+
+  <div class="row h-100">
+    <div class="col">
+
+      <div class="mat-form-field">
+        <form [formGroup]="enrollStudentForm">
+
+
+
+          PR Number:<label style="color:red"> *</label><br><input matInput class="form-control1 col-md-6 " style="background-color: white"
+            type="text" placeholder="Enter 9-11 digit number" formControlName="cert_PRno"><br>
+
+          <div class="row">
+            <div class="column">
+              First-Name:<label style="color:red"> *</label><input matInput class="form-control" type="text"
+                placeholder="First-name" style="background-color: white" formControlName="firstName">
+            </div>
+
+
+            <div class="column">
+              Last-Name:<label style="color:red"> *</label><input matInput class="form-control" type="text" placeholder="Surname" style="background-color: white"
+                formControlName="surname">
+            </div>
+
+            <div class="column">
+              Second-Name:<input matInput class="form-control" type="text" placeholder="Middle name" style="background-color: white" formControlName="secondName">
+            </div>
+
+
+
+          </div>
+
+
+          <div class="row">
+            College-Name:<label style="color:red"> *</label>
+            <mat-form-field>
+              <select matNativeControl required class="form-control1 col-md-6" style="background-color: white" formControlName="collegeName">
+                <option value="pcce">Padre Conceicao College of Engineering</option>
+                <option value="gec">Goa Engineering College</option>
+                <option value="rit">Shree Rayeshwar Institute of Engineering and Information Technology</option>
+                <option value="dbce">Don Bosco College of Engineering </option>
+              </select>
+            </mat-form-field>
+          </div>
+
+          <!--
+                <input matInput class="form-control col-md-6" type="text"
+                placeholder="Ex:PCCE" formControlName="collegeName">
+              -->
+          <div class="row">
+            <div class="column">
+              Branch:<label style="color:red"> *</label>
+              <mat-form-field>
+                <select matNativeControl required class="form-control2 col-md-6" style="background-color: white"
+                  formControlName="branch">
+                  <option value="me">Mechanical</option>
+                  <option value="etc">Electronics and Telecommunication</option>
+                  <option value="cs">Computers</option>
+                  <option value="it">Information Technology</option>
+                </select>
+              </mat-form-field>
+              <!--
+                <input matInput class="form-control col-md-6" type="text" placeholder="Ex:Information Technology"
+                formControlName="branch">
+              -->
+            </div>
+
+
+            <div class="column">
+              Year of Admission: <label style="color:red"> *</label>
+              <mat-form-field>
+                <select matNativeControl required class="form-control2 col-md-6" style="background-color: white"
+                  formControlName="YOA">
+                  <option value="2000">2000</option>
+                  <option value="2001">2001</option>
+                  <option value="2002">2002</option>
+                  <option value="2003">2003</option>
+                  <option value="2004">2004</option>
+                  <option value="2005">2005</option>
+                  <option value="2006">2006</option>
+                  <option value="2007">2007</option>
+                  <option value="2008">2008</option>
+                  <option value="2009">2009</option>
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                </select>
+              </mat-form-field>
+              <!--
+              <input matInput class="form-control col-md-6" type="text"
+                placeholder="Ex: 2019" formControlName="YOA">
+              -->
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="column">
+              Email-Id:<label style="color:red">*</label><input matInput class="form-control col-md-6" type="text"
+                placeholder="abc@gmail.com" style="background-color: white" formControlName="emailId">
+
+            </div>
+
+            <div class="column">
+              Mobile-Number:<label style="color:red">*</label><input matInput class="form-control col-md-6" type="number"
+                placeholder="987654321" style="background-color: white" formControlName="mobileNumber"><br>
+            </div>
+          </div>
+          <button [disabled]="enrollStudentForm.invalid" color="primary" mat-stroked-button (click)="enrollStudent()">Submit
+            Records</button>
+          <br>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

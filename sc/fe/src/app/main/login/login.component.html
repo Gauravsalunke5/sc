@@ -1,0 +1,32 @@
+<section class="d-flex align-items-center justify-content-center">
+  <div class="container">
+    <div class="row justify-content-end mt-5">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+        <div class="card">
+          <div class="card-body">
+            <form [formGroup]="loginForm">
+              <mat-card-title class="align-items-center">{{type}} Login</mat-card-title>
+              <mat-form-field class="w-100">
+
+                <input matInput placeholder="Username" formControlName="username">
+                <i class="material-icons">person </i>
+              </mat-form-field>
+              <mat-form-field class="w-100">
+                <input type="password" matInput placeholder="Password" formControlName="password">
+                <i class="material-icons">lock </i>
+              </mat-form-field>
+              <button [disabled]="loginForm.invalid" color="primary" mat-stroked-button (click)="loginClicked()">Login</button>
+              <br>
+              <label>
+                <div>
+                  <!-- Forgot password -->
+                  <button mat-button color="accent" routerLink="edit-profile-details">Forgot password?</button>
+                </div>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

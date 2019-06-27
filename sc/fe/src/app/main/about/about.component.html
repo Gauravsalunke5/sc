@@ -1,0 +1,200 @@
+<p>
+  about works!
+</p>
+
+<form [formGroup]="queryCertForm">
+
+    <div class="main">
+      <label for="query"><strong>Enter Seat Number:</strong></label>
+      <input class="form-control" type="text" placeholder="Ex: 8-9 digit number" name="query" formControlName="seatNo"><br>
+      <button (click)="queryCert()">Query Specific</button>
+    </div>
+  </form>
+<!--
+
+<div class="form-group">
+  <div class="fontstyle"><br><label><strong>Query A Specific Certificate</strong></label></div><br>
+  <h5 style="color:red;margin-bottom:2%" id="error_query"></h5>
+
+
+  <form [formGroup]="queryCertForm">
+
+    <div class="main">
+      <label for="query"><strong>Enter Seat Number:</strong></label>
+      <input class="form-control" type="text" placeholder="Ex: 8-9 digit number" name="query" formControlName="seatNo"><br>
+      <button (click)="queryCert()">Query Specific</button>
+    </div>
+  </form>
+
+</div>
+<table class="table">
+  <tr>
+    <th>PR number</th>
+    <th>Student Name</th>
+    <th>College Name</th>
+    <th>Seat number </th>
+    <th>Examination</th>
+    <th>Year of Passing</th>
+    <th>Subject</th>
+
+  </tr>
+  <tr>
+
+    <td>{{Newcertificate.prNo}}</td>
+    <td>{{Newcertificate.studentName}}</td>
+    <td>{{Newcertificate.collegeName}}</td>
+    <td>{{Newcertificate.seatNo}}</td>
+    <td>{{Newcertificate.examination}}</td>
+    <td>{{Newcertificate.yearOfPassing}}</td>
+    <td>{{Newcertificate.sub}}</td>
+
+  </tr>
+</table>
+
+<br><br>
+
+<div class="container">
+  <div class="gu">
+    <h5><strong> GOA UNIVERSITY</strong></h5>
+  </div><br>
+
+  <div class="first">
+    <h6><strong>  Seat Number: <label>{{Newcertificate.seatNo}}</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PR NO: <label>{{Newcertificate.prNo}}</label><br><br>
+    College Name: <label>{{Newcertificate.collegeName}}</label><br><br>
+    Certificate showing the marks/grades obtained by
+    Shri/Kum.: <label>{{Newcertificate.studentName}}</label><br><br>
+    Examination held in: <label>{{Newcertificate.examination}}</label><br><br>
+    Year Of Passing: <label>{{Newcertificate.yearOfPassing}}</label><br><br>
+  </strong></h6>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <strong>
+      <hr></strong>
+  </div>
+  <div class="align">
+    <div class="table">
+      <tr>
+        <th>PAPER/SUBJECT</th>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp;
+        <th></th>
+        <th>MAXIMUM MARKS</th>
+        &nbsp;&nbsp;
+        <th>MARKS OBTAINED</th>
+      </tr>
+    </div>
+    <strong>
+      <hr></strong>
+  </div>
+
+
+  <tr>
+    <td>Subject 1</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td> <b> THEORY:</b></td>
+    &nbsp;&nbsp;
+    <td>100</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td><label>{{Newcertificate.sub}}</label></td>
+  </tr>
+  <br><br>
+  <tr>
+    <td>Subject 2</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <td> <b> THEORY:</b></td>
+    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <td>100</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td><label>{{Newcertificate.sub}}</label></td>
+  </tr>
+  <br><br>
+  <tr>
+    <td>Subject 3</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <td><b> THEORY:</b></td>
+    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <td>100</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td><label>{{Newcertificate.sub}}</label></td>
+  </tr>
+  <br><br>
+  <tr>
+    <td>Subject 4</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <td><b> THEORY:</b></td>
+    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <td>100</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td><label>{{Newcertificate.sub}}</label></td>
+  </tr>
+  <br><br>
+  <tr>
+    <td>Subject 5</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <td><b> THEORY:</b></td>
+    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <td>100</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td><label>{{Newcertificate.sub}}</label></td>
+  </tr>
+  <br><br>
+  <tr>
+    <td>Subject 6</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <td><b> THEORY:</b></td>
+    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <td>100</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td><label>{{Newcertificate.sub}}</label></td>
+  </tr>
+
+
+  <strong>
+    <hr></strong>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <tr>
+    <td></td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <td><b> SEMESTER TOTAL:</b></td>
+    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <td>600</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td><label>{{Newcertificate.sub}}</label></td>
+  </tr>
+  <strong>
+    <hr></strong>
+</div>-->

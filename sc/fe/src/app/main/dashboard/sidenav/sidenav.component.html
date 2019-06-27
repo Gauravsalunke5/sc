@@ -1,0 +1,16 @@
+<mat-nav-list class="pt-0"><br><br>
+  
+  <img mat-card-image src="../assets/uni.jpg"  *ngIf="type==0"height="30%" width="80%">
+  <img mat-card-image src="../assets/creator.jpg"  *ngIf="type==1" height="30%" width="90%">
+  <img mat-card-image src="../assets/student.jpg"  *ngIf="type==2" height="30%" width="90%"><br><br>
+  <h3 *ngIf="type==0">UNIVERSITY</h3>
+  <h3 *ngIf="type==1">CREATOR</h3>
+  <h3 *ngIf="type==2">STUDENT</h3><br><br><br>
+  <a mat-list-item routerLink="/dashboard">Dashboard</a><br>
+  <a mat-list-item *ngIf="type==0" routerLink="create-certificate">Create Certificate</a>
+  <a mat-list-item *ngIf="type==0" routerLink="certificate-template">Certificate</a>
+  <a mat-list-item *ngIf="type==1" routerLink="enroll-student">Enroll Student</a>
+  <a mat-list-item *ngIf="type==1" routerLink="view-enrolled-student">View Enrolled Student</a>
+  <a mat-list-item *ngIf="type==2" routerLink="view-certificate">View Certificate</a><br>
+ 
+</mat-nav-list>

@@ -1,0 +1,41 @@
+<div class="form-group">
+  <label>
+    <div class="fontstyle"><br><label><strong>Search For A Specific Student</strong></label></div><br>
+  </label><br>
+  <h4 style="color:red;margin-bottom:2%" id="error_query"> Please enter a valid PR number.</h4>
+  <form [formGroup]="queryForm">
+
+    <div class="main">
+      <strong> Enter a PR number:</strong> <input class="form-control" type="text" placeholder="Enter the 8-9 digits PR-number"
+        formControlName="cert_PRno">
+      <br>
+
+      <button (click)="viewEnrolled()">Find Student</button>
+    </div>
+  </form>
+</div>
+
+<table class="table">
+  <tr>
+    <th>PR Number</th>
+    <th>First Name</th>
+    <th>Second Name</th>
+    <th>Surname </th>
+    <th>College Name</th>
+    <th>Branch</th>
+    <th>Year of Admission</th>
+    <th>Email ID</th>
+    <th>Mobile Number</th>
+  </tr>
+  <tr>
+    <td>{{student.prNo}}</td>
+    <td>{{student.firstName}}</td>
+    <td>{{student.secondName}}</td>
+    <td>{{student.surname}}</td>
+    <td>{{student.collegeName}}</td>
+    <td>{{student.branch}}</td>
+    <td>{{student.yearOfAdmission}}</td>
+    <td>{{student.emailId}}</td>
+    <td>{{student.mobileNumber}}</td>
+  </tr>
+</table>

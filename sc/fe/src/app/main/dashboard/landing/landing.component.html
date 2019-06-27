@@ -1,0 +1,48 @@
+<!-- <app-topnav></app-topnav> -->
+<div class="body">
+  <div class="class">
+    Welcome To The Dashboard!
+  </div>
+  <div class="hi">
+    <div class="data">
+      <h3>You have successfully logged in. You can now select appropriate option, to perform your rights.</h3>
+    </div><br><br>
+    <div *ngIf="type==0">
+
+      <div class="pic">
+        <img src="../assets/unidb.jpg">
+      </div>
+
+      <h4>You can make use of the following functionalities:<br>
+        1. Create Certificate<br>
+        2. Transfer Certificate<br>
+        3. View Created Certificate
+
+      </h4>
+
+    </div>
+    <div *ngIf="type==1">
+
+      <div class="pic">
+        <img src="../assets/crdb.jpg" style="border: 2px solid black">
+      </div>
+
+
+      <h4>You can make use of the following functionalities:<br>
+        1. Enroll Students<br>
+        2. View Enrolled Students<br>
+      </h4>
+    </div>
+    <div *ngIf="type==2">
+
+      <div class="pic">
+        <img src="../assets/stdb.jpg" style="border: 1.5px solid black">
+      </div>
+
+
+      <h4><br>
+        As a STUDENT, you can only view the certificate based on your seat number
+      </h4>
+    </div>
+  </div>
+</div>

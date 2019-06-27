@@ -1,0 +1,26 @@
+<mat-toolbar class="toolbar">
+  <span>SecureCert</span>
+
+  <mat-nav-list class="list">
+    <a mat-list-item routerLink="/">
+      <mat-icon>home</mat-icon> Home
+    </a>
+    <a mat-list-item (click)="scroll('about')">
+      <mat-icon>dehaze</mat-icon> About
+    </a>
+    <a mat-list-item (click)="scroll('team')">
+      <mat-icon>group</mat-icon> Team
+    </a>
+    <a mat-list-item (click)="scroll('contactus')">
+      <mat-icon>local_phone</mat-icon> Contact
+    </a>
+    <button *ngIf="isLoggedIn" mat-button color="primary" (click)="logout()">Logout</button>
+    <button *ngIf="!isLoggedIn" mat-button color="primary" [matMenuTriggerFor]="menu">Login</button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/login" [queryParams]="{type: 'university'}">University</button>
+      <button mat-menu-item routerLink="/login" [queryParams]="{type: 'creator'}">Creator</button>
+      <button mat-menu-item routerLink="/login" [queryParams]="{type: 'student'}">Student</button>
+    </mat-menu>
+  </mat-nav-list>
+</mat-toolbar>

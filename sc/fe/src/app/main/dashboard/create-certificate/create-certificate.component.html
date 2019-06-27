@@ -1,0 +1,176 @@
+<!-- <form [formGroup]="recordCertForm">
+  <div class="form-group">
+    <label>Add Certificate</label>
+    <h5 style="color:green;margin-bottom:2%" id="success_create"></h5>
+    <br>
+    Enter PR no.: <input class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno"><br><br>
+    Enter name of college: <input class="form-control" type="text" placeholder="Ex: PCCE" formControlName="cert_CName"><br><br>
+    Enter Seat no.: <input id="createName" class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_Seatno"><br><br>
+    Enter Examination: <input id="createName" class="form-control" type="text" placeholder="Ex: may/june" formControlName="cert_examination"><br><br>
+    Enter Year of passing: <input class="form-control" type="text" placeholder="Ex: 2019" formControlName="cert_YOP"><br><br>
+    Enter Sub: <input class="form-control" type="text" placeholder="Ex: abc" formControlName="cert_sububject"><br><br>
+    <button (click)="recordCert()">Submit Records</button>
+</div>
+</form> -->
+<section class="main">
+  <div class="container">
+    <div class="header">
+      <h3><br><strong> Create Certificate Form</strong></h3>
+    </div>
+
+    <div class="row h-100">
+      <div class="col">
+
+
+        <div class="mat-form-field">
+          <form [formGroup]="recordCertForm">
+
+            <div class="align">
+
+              Enter PR Number: <input matInput class="form-control" placeholder="Enter 9-11 digit number" style="background-color: white"
+                formControlName="cert_PRno"><br>
+
+              Enter Seat Number: <input matInput class="form-control" type="text" style="background-color: white"
+                formControlName="cert_Seatno"><br>
+
+              Enter Name of the College:
+              <mat-form-field>
+                <select matNativeControl required class="form-control" style="background-color: white" formControlName="cert_CName">
+                  <option value="PCCE">Padre Coensao College Of Engineering</option>
+                  <option value="DBSC">DonBosco College Of Engineering</option>
+                  <option value="GEC">Goa College Of Engineering</option>
+                  <option value="RIT">Rayeshwar COllege Of Engineering</option>
+                </select>
+              </mat-form-field>
+              <!--<input matInput class="form-control" type="text" placeholder="Ex: PCCE"
+              formControlName="cert_CName"><br>-->
+
+
+
+              <div class="row">
+                <div class="column">
+                  Enter Examination:
+                  <mat-form-field>
+                    <select matNativeControl required class="form-control1" style="background-color: white"
+                      formControlName="cert_examination">
+                      <option value="May/June">May/June</option>
+                      <option value="Nov/Dec">Nov/Dec</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+                <!-- <input matInput class="form-control" type="text" placeholder="Ex: may/june"
+              formControlName="cert_examination"><br>-->
+                <div class="column">
+                  Enter Year of passing:
+                  <mat-form-field>
+                    <select matNativeControl required class="form-control1" style="background-color: white"
+                      formControlName="cert_YOP">
+                      <option value="2004">2004</option>
+                      <option value="2005">2005</option>
+                      <option value="2006">2006</option>
+                      <option value="2007">2007</option>
+                      <option value="2008">2008</option>
+                      <option value="2009">2009</option>
+                      <option value="2010">2010</option>
+                      <option value="2011">2011</option>
+                      <option value="2012">2012</option>
+                      <option value="2013">2013</option>
+                      <option value="2014">2014</option>
+                      <option value="2015">2015</option>
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                      <option value="2028">2028</option>
+                      <option value="2029">2029</option>
+                      <option value="2030">2030</option>
+                    </select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <!--<input matInput class="form-control" type="text" placeholder="Ex: 2019"
+              formControlName="cert_YOP"><br>-->
+
+              <div class="row">
+                <div class="column">
+                  Enter Subject 1: <input matInput class="form-control2" type="text" placeholder="Marks in Subject 1 "
+                    style="background-color: white" formControlName="cert_subject">
+                </div>
+                <div class="column">
+                  Enter Subject 2: <input matInput class="form-control2" type="text" placeholder="Marks in Subject 2 "
+                    style="background-color: white" formControlName="cert_subject2">
+                </div>
+
+
+                <div class="column">
+                  Enter Subject 3: <input matInput class="form-control2" type="text" placeholder="Marks in Subject 3 "
+                    style="background-color: white" formControlName="cert_subject3">
+                </div>
+              </div>
+              <div class="row">
+                <div class="column">
+                  Enter Subject 4: <input matInput class="form-control2" type="text" placeholder="Marks in Subject 4 "
+                    style="background-color: white" formControlName="cert_subject4">
+                </div>
+
+
+                <div class="column">
+                  Enter Subject 5: <input matInput class="form-control2" type="text" placeholder="Marks in Subject 5 "
+                    style="background-color: white" formControlName="cert_subject5">
+                </div>
+                <div class="column">
+                  Enter Subject 6: <input matInput class="form-control2" type="text" placeholder="Marks in Subject 6 "
+                    style="background-color: white" formControlName="cert_subject6">
+                </div>
+              </div>
+
+              <button [disabled]="recordCertForm.invalid" color="primary" mat-stroked-button (click)="recordCert()">Create
+                Certificate</button>
+
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br>
+
+  <div class="container1">
+    <div class="header">
+      <h3><br><strong>Transfer Certificate Form</strong></h3>
+    </div>
+    <div class="row h-100">
+      <div class="col">
+
+
+        <div class="mat-form-field">
+          <form [formGroup]="transferCertForm">
+            <div class="form-group">
+
+              <div class="align">
+                Enter Seat Number: <input matInput class="form-control1" placeholder="Enter seat number" style="background-color: white"
+                  formControlName="cert_Seatno"><br><br>
+                Enter Student Name: <input matInput class="form-control1" placeholder="Enter Full Name" style="background-color: white"
+                  formControlName="firstName"><br><br>
+                <button [disabled]="transferCertForm.invalid" color="primary" mat-stroked-button (click)="transferCert()">Transfer
+                  Certificate</button>
+
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

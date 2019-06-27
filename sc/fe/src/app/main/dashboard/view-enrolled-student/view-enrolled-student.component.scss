@@ -1,0 +1,49 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.fontstyle{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 35px;
+    margin-left: 30px;
+}
+
+h5{
+    margin-left: 20px;
+}
+
+.main{
+    margin-left: 20px;
+    width:40%;
+    font-size: 20px;
+}
+
+.form-control{
+    border-radius: 25px;
+    border: 1.5px solid black;
+    padding: 20px; 
+    width: 600px;
+    height: 68px; 
+  }
+
+  button:hover{
+    background-color: rgb(204, 194, 194);
+  }
+
+
+
+
+
+
